@@ -1,0 +1,57 @@
+﻿<Window x:Class="FUMiniHotelSystem.CustomerManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FUMiniHotelSystem"
+        mc:Ignorable="d"
+        Title="CustomerManagementWindow" Height="437" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="CustomerId" HorizontalAlignment="Left" Margin="37,56,0,0" VerticalAlignment="Top"/>
+        <Label Content="Customer Full Name" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telephone" HorizontalAlignment="Left" Margin="37,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustomerIdtxt" HorizontalAlignment="Left" Margin="173,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" IsEnabled="False"  
+                 Text="{Binding Path=CustomerId, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvCustomers, 
+                 Path=SelectedItem}" FontWeight="Bold" />
+        <TextBox x:Name="CustomerFullNametxt" HorizontalAlignment="Left" Margin="173,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" IsEnabled="False" 
+                 Text="{Binding Path=CustomerFullName, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvCustomers, 
+                 Path=SelectedItem}" FontWeight="Bold" />
+        <TextBox x:Name="Telephonetxt" HorizontalAlignment="Left" Margin="173,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" IsEnabled="False" 
+                 Text="{Binding Path=Telephone, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvCustomers, 
+                 Path=SelectedItem}" FontWeight="Bold" />
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="37,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Customer Birthday" HorizontalAlignment="Left" Margin="37,232,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="EmailAddresstxt" HorizontalAlignment="Left" Margin="173,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" IsEnabled="False" 
+                 Text="{Binding Path=EmailAddress, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvCustomers, 
+                 Path=SelectedItem}" FontWeight="Bold" />
+        <TextBox x:Name="CustomerBirthdaytxt" HorizontalAlignment="Left" Margin="173,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" IsEnabled="False" 
+                 Text="{Binding Path=CustomerBirthday, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvCustomers, 
+                 Path=SelectedItem}" FontWeight="Bold" />
+        <Button x:Name="Updatebtn" Content="Update" HorizontalAlignment="Left" Margin="214,284,0,0" VerticalAlignment="Top" Height="32" Width="56"
+                Click="Updatebtn_Click"/>
+        <Button x:Name="Deletebtn" Content="Delete" HorizontalAlignment="Left" Margin="311,284,0,0" VerticalAlignment="Top" Height="32" Width="56"
+                Click="Deletebtn_Click"/>
+        <Button x:Name="Insertbtn" Content="Insert new user" HorizontalAlignment="Left" Margin="27,284,0,0" VerticalAlignment="Top" Height="32" Width="118"
+                Click="Insertbtn_Click"/>
+        <ListView x:Name="lvCustomers" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,0,0,10" Width="NaN">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Customer ID" Width="100" DisplayMemberBinding="{Binding Path=CustomerId }"/>
+                    <GridViewColumn Header="Customer Full Name" Width="150" DisplayMemberBinding="{Binding Path=CustomerFullName}"/>
+                    <GridViewColumn Header="Telephone" Width="100" DisplayMemberBinding="{Binding Path=Telephone }"/>
+                    <GridViewColumn Header="Email Address" Width="200" DisplayMemberBinding="{Binding Path=EmailAddress}"/>
+                    <GridViewColumn Header="Customer Birthday" Width="100" DisplayMemberBinding="{Binding Path=CustomerBirthday}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="Closebtn" Content="Close" HorizontalAlignment="Left" Margin="27,365,0,0" VerticalAlignment="Top" Click="Closebtn_Click" Width="64"/>
+        <Button x:Name="SearchBtn" Content="Search" HorizontalAlignment="Left" Margin="247,15,0,0" VerticalAlignment="Top" Click="SearchBtn_Click"/>
+        <TextBox x:Name="keyWordtxt" HorizontalAlignment="Left" Margin="96,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="20"/>
+    </Grid>
+</Window>

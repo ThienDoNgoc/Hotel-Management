@@ -1,0 +1,18 @@
+﻿<Window x:Class="FUMiniHotelSystem.AdminMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FUMiniHotelSystem"
+        mc:Ignorable="d"
+        Title="AdminMainWindow" Height="444" Width="310"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,10,-6">
+        <Button x:Name="ManageCustomerbtn" Content="Manage Customer" HorizontalAlignment="Left" Margin="26,41,0,0" VerticalAlignment="Top" Height="47" Width="233" Click="ManageCustomerbtn_Click" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="ManageRoomInformationbtn" Content="Manage Room Information" HorizontalAlignment="Left" Margin="26,118,0,0" VerticalAlignment="Top" Height="47" Width="233" Click="ManageRoomInformationbtn_Click" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="BookingReservationBtn" Content="Booking Reservation" HorizontalAlignment="Left" Margin="26,189,0,0" VerticalAlignment="Top" Height="47" Width="233" Click="BookingReservationBtn_Click" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="StatisticBtn" Content="Report Statistic" HorizontalAlignment="Left" Margin="26,266,0,0" VerticalAlignment="Top" Height="47" Width="233" Click="StatisticBtn_Click" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="SignOutBtn" Content="Sign Out" HorizontalAlignment="Left" Margin="16,358,0,0" VerticalAlignment="Top" Width="80" Click="SignOutBtn_Click"/>
+
+    </Grid>
+</Window>

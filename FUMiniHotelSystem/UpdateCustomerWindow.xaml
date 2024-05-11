@@ -1,0 +1,43 @@
+﻿<Window x:Class="FUMiniHotelSystem.UpdateCustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FUMiniHotelSystem"
+        mc:Ignorable="d"
+        Title="UpdateCustomerWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10,10,10,-53">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Customer Full Name:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="CustomerFullNametxt"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Telephone:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Telephonetxt"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Email Address:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="EmailAddresstxt" IsEnabled="False" FontWeight="Bold" />
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Customer Birthday:"/>
+        <DatePicker Name="CustomerBirthdaytxt" Grid.Row="3" Grid.Column="1" Margin="0,0,506,26" Grid.RowSpan="2"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Password:"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Passwordtxt"/>
+
+        <Button x:Name="UpdateCustomerbtn" Grid.Row="6" Grid.Column="1" Content="Update Customer" Click="UpdateCustomer_Click" Margin="38,27,459,199"/>
+        <Button Grid.Row="6" Grid.Column="1" Content="Cancel" Click="Cancel_Click" Margin="321,27,176,199"/>
+    </Grid>
+</Window>

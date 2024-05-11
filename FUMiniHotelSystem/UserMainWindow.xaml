@@ -1,0 +1,16 @@
+﻿<Window x:Class="FUMiniHotelSystem.UserMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FUMiniHotelSystem"
+        mc:Ignorable="d"
+        Title="UserMainWindow" Height="398" Width="255"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,23,-6">
+        <Button x:Name="ManageProfilebtn" Content="Manage Profile" HorizontalAlignment="Left" Margin="33,52,0,0" VerticalAlignment="Top" Height="70" Width="177" FontWeight="Bold" FontSize="20" Click="ManageProfilebtn_Click"/>
+        <Button x:Name="BookingHistorybtn" Content="Booking History" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="67" Width="177" FontWeight="Bold" FontSize="20" Click="BookingHistorybtn_Click"/>
+        <Button x:Name="SignOutbtn" Content="Sign out" HorizontalAlignment="Left" Margin="24,314,0,0" VerticalAlignment="Top" Height="27" Width="77" Click="SignOutbtn_Click"/>
+
+    </Grid>
+</Window>
